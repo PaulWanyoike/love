@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Prank</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: pink;
+            padding: 50px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: red;
+            font-size: 35px;
+            text-shadow: 2px 2px white;
+        }
+        p {
+            font-size: 22px;
+            color: #555;
+            font-style: italic;
+        }
+        .btn {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 12px 25px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            transform: scale(1.1);
+        }
+        /* Hidden Fools' Day message */
+        .hidden-message {
+            display: none;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hidden-message h1 {
+            font-size: 60px;
+            color: red;
+            text-shadow: 4px 4px white;
+            animation: shake 0.5s infinite alternate;
+        }
+        .emoji {
+            font-size: 90px;
+            margin-top: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+        /* Animations */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Romantic Love Message -->
+    <div class="container" id="loveMessage">
+        <h1>🌹 Will You Be Mine? ❤️</h1>
+        <p>I've been waiting for this moment... You're the one I truly adore. 😘</p>
+        <button class="btn" onclick="showFools()">Yes, I Love You Too! 💕</button>
+    </div>
+
+    <!-- Fools' Day Prank Message -->
+    <div class="hidden-message" id="foolsMessage">
+        <h1>😂 Happy Fools' Day! 😂</h1>
+        <div class="emoji">🎉🎈🤣</div>
+    </div>
+
+    <script>
+        function showFools() {
+            document.getElementById("loveMessage").style.display = "none";
+            document.getElementById("foolsMessage").style.display = "block";
+        }
+    </script>
+</body>
+</html>
